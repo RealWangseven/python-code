@@ -1,0 +1,2 @@
+git config --global http.proxy http://
+git config --global https.proxy http://
