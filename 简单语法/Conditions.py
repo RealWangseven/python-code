@@ -40,8 +40,45 @@ is_member: 是否为会员, True 为是, False 为否.
 8 小时, 非会员 -> 停车费: 32.00 元
 0 小时, 会员 -> 时长无效
 """
-
+"""
 hours = 5
 is_member = True
-if 3 < hours < 6:
-    print 
+if is_member :
+    print("这是会员,停车费17.6元")
+else :
+    print("这不是会员,停车费18元")
+"""
+#确实写得不好。。。
+
+
+"""
+hours = 5
+is_member = True
+al = hours * 5
+be = 2 * 5 + (hours - 2) * 4
+ch = 2 * 5 + 4 * 4 + (hours - 6) * 3
+
+alm = al * 0.8
+bem = be * 0.8
+chm = ch * 0.8
+
+fee = (al,alm,be,bem,ch,chm);
+
+if is_member:
+    if hours<=2:
+        fee=alm
+    elif hours<=5:
+        fee=bem
+    else:
+        fee=chm;
+    print(f"您是会员,您的停车费用是{fee:.2f}元")
+else:
+    if hours<=2:
+        fee=al
+    elif hours<=5:
+        fee=be
+    else:
+        fee=ch;
+    print(f"您不是会员,您的停车费用是{fee:.2f}元")
+"""
+#终于！
