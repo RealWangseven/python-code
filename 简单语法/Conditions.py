@@ -82,3 +82,96 @@ else:
     print(f"您不是会员,您的停车费用是{fee:.2f}元")
 """
 #终于！
+"""
+练习: 登录判断
+
+已知:
+correct_password = "python123"
+password: 用户输入的密码
+is_locked: 账号是否被锁定
+attempts: 本次登录前已连续输错的次数, 假设为非负整数
+
+规则:
+1. 账号已锁定, 或 attempts >= 3:
+   输出 "账号已锁定".
+2. 否则, 密码正确:
+   输出 "登录成功".
+3. 否则:
+   attempts 加 1.
+   如果此时 attempts >= 3, 输出 "密码错误, 账号已锁定".
+   否则输出 "密码错误, 还剩 X 次机会".
+
+要求:
+使用 if / elif / else.
+不使用循环.
+锁定时不再检查密码.
+"""
+"""
+correct_password = "python123"
+password = "abc"
+is_locked = False
+attempts = 2
+if password == correct_password:
+    attempts = attempts
+    is_locked = False
+    print("密码正确")
+else:
+    attempts+=1
+    print("密码错误")
+    if attempts >=3:
+        attempts = attempts
+        is_locked = True
+        print("密码输入错误次数过多,账号已锁定")
+"""
+#先判断账户是否锁定
+#更改后
+"""
+correct_password = "python123"
+password = "abc"
+is_locked = False
+attempts = 2
+if is_locked :
+    print ("")
+elif password == correct_password:
+        attempts = attempts
+        is_locked = False
+        print("密码正确")
+else:
+    attempts+=1
+    print("密码错误")
+    if attempts >=3:
+        attempts = attempts
+        is_locked = True
+        print("密码输入错误次数过多,账号已锁定")
+"""
+#首次全部写对代码
+
+
+#==for循环==
+
+"""
+for i in range(5):   
+    print (i)
+"""
+#range 表示一串规律变化的整数
+
+
+
+"""
+total = 0
+for i in range(1,6):  #取1-6,py规定包含起点不包含终点
+    total +=i;
+print (total);
+#取1+2+3+。。。+5=15
+"""
+"""
+for i in range (1,11,2):
+    total +=i
+    print (total);
+"""
+"""
+for i in range (1,6):
+    if i == 3 :
+        continue
+    print (i)
+"""
