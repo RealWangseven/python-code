@@ -216,19 +216,46 @@ for i in range (1,6):
 第 5 次恰好猜中: 只输出成功提示.
 """
 
-from re import I
+# from re import I
 
 
-answer = 67  # answer: 正确答案
-attempts = 0  # attempts: 已使用的次数
-limit = 5  # limit: 次数上限
-guessed = False  # guessed: 是否已经猜中
+# answer = 67  # answer: 正确答案
+# attempts = 0  # attempts: 已使用的次数
+# limit = 5  # limit: 次数上限
+# won = False;
 
-# input("请输入猜测值: ") 获取输入, 返回字符串.
-# int(...) 将输入的字符串转换成整数.
+# # input("请输入猜测值: ") 获取输入, 返回字符串.
+# # int(...) 将输入的字符串转换成整数.
 
-i = input("猜数字：")
-while guessed:
-    if i == answer:
-        print ("111")
+# while attempts < limit:
+#     guessed = int (input("猜数字："))
+
+#     attempts += 1   #猜一次计数一次
+
+#     if guessed < 1 or guessed > 100:
+#         print("超出范围请重试")
+#         continue;   #超出范围
+
+
+#     if guessed != answer:
+#         print("答案错误请重试")
+
+#         if guessed > answer:
+#             print("猜大了")
+#             continue;
+
+#         if guessed < answer:
+#             print("猜小了")
+#             continue;   #数字比较
         
+#     elif guessed == answer:
+#         print("答案正确")
+#         won = True
+#         break;
+# if won == False:
+#     print (f"机会已用完,正确答案是{answer}")
+# else:
+#     print (f"恭喜你答对了,你一共猜了{attempts}次")
+"""
+写了好几版,学cpp的时候也卡在这个
+"""
