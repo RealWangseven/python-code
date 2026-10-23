@@ -87,14 +87,16 @@ len(scores) 可以获取列表的元素个数.
 # afttotal = 0
 # # 请在下面编写代码:
 # for a in prices:
-#     if prices >= 100:
-#         count += 1;
+#     if a >= 100:
+#      count += 1
+#      total += a
 # print(f"{count}....")
-# total = sum(prices);
 # if total >= 300:
-#     afttotal == total
-#     afttotal -= 50;
+#     afttotal = total - 50
 # else:
-#     total == total;
-#     print(f"{count},{total},{afttotal}")
+#     total = total;
+# print(f"{count},{total},{afttotal}")
+"""
+有点绕
+"""
 
