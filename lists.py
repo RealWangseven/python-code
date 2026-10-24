@@ -147,19 +147,45 @@ len(scores) 可以获取列表的元素个数.
 总分可以使用 sum(), 成绩个数使用 len().
 """
 
-scores = [82, 95, 67, 88, 73, 90]  # scores: 成绩列表
-highest = scores[0]  # highest: 当前最高分
-lowest = scores[0]  # lowest: 当前最低分
+# scores = [82, 95, 67, 88, 73, 90]  # scores: 成绩列表
+# highest = scores[0]  # highest: 当前最高分
+# lowest = scores[0]  # lowest: 当前最低分
 
-# 请在下面编写代码:
+# # 请在下面编写代码:
 
-for i in scores:
-    if i > highest:
-        highest = i;
-        print(highest)
-    if i < lowest:
-        lowest = i;
-        print(lowest)
-total = sum(scores)
-a = (total - highest - lowest) / 4
-print(f"{a:.2f}");
+# for i in scores:
+#     if i > highest:
+#         highest = i;
+#         print(highest)
+#     if i < lowest:
+#         lowest = i;
+#         print(lowest)
+# total = sum(scores)
+# a = (total - highest - lowest) / 4
+# print(f"{a:.2f}");
+
+"""
+练习: 修改成绩列表
+
+初始成绩为 [72, 85, 59].
+
+任务:
+1. 在末尾添加成绩 90.
+2. 删除下标为 1 的成绩.
+3. 将最后一个成绩增加 5 分.
+4. 输出最终列表和平均分, 平均分保留两位小数.
+"""
+
+# from re import A
+
+
+# scores = [72, 85, 59]  # scores: 成绩列表
+
+# # 请在下面编写代码:
+
+# scores.append(90)
+# scores.pop(1)
+# scores[-1] += 5
+# total = sum(scores)
+# a = total / len(scores)
+# print (f"{a:.2f}")
