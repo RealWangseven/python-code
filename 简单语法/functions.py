@@ -443,7 +443,10 @@ compare() 内不能重复计算总分和平均分, 必须调用 analyze().
 函数内不写 print().
 """
 
-scores = [45, 80, 62, 91, 58, 76]  # scores: 原始成绩
+
+
+
+# scores = [45, 80, 62, 91, 58, 76]  # scores: 原始成绩
 
 # select_scores: 筛选成绩函数
 # data: 传入的成绩列表
@@ -453,5 +456,61 @@ scores = [45, 80, 62, 91, 58, 76]  # scores: 原始成绩
 # len(result) == 0: 判断列表是否为空
 # 请在下面编写代码:
 
-def select_scores(data, threshold=60):
-    
+# def select_scores(data, threshold=60):
+#     result = []
+#     for grade in data:
+#         if grade >= threshold:
+#             result.append(grade)
+#     return result
+# passedA = select_scores(scores)
+# passedB = select_scores(scores,threshold=80)
+
+# average = round(sum(select_scores(scores,threshold=80)) / len(select_scores(scores,threshold=80)),2)
+# if len(passedB) == 0:
+#     print("没有符合条件的成绩")
+# else:
+#     print(f"{average}")
+
+"""
+练习: 筛选偶数并倒序
+
+定义函数 select_even(data).
+
+任务:
+1. 在函数内创建空列表 result.
+2. 遍历 data, 将偶数添加到 result.
+3. 返回 result.
+
+在函数外:
+1. 调用函数, 用一个变量接收整个结果列表.
+2. 输出筛选后的列表.
+3. 用切片将筛选结果倒序, 再输出.
+4. 输出原列表, 确认它没有改变.
+
+要求:
+函数内不写 print().
+不直接写死筛选结果.
+"""
+
+
+
+# numbers = [13, 8, 21, 6, 17, 10, 4]  # numbers: 原始数字列表
+
+# select_even: 筛选偶数
+# data: 传入的列表
+# result: 筛选结果列表
+# selected: 函数外接收的结果列表
+# 请在下面编写代码:
+
+# def select_even(data):
+#     result = []
+#     for i in data:
+#         if i % 2 == 0:
+#             result.append(i)
+#     return result;
+# j = select_even(numbers)
+# print(j)
+# j = j[::-1]
+# print(j)
+# print(numbers)
+
