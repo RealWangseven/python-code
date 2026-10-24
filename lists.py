@@ -189,3 +189,52 @@ len(scores) 可以获取列表的元素个数.
 # total = sum(scores)
 # a = total / len(scores)
 # print (f"{a:.2f}")
+"""
+练习: 列表切片
+
+已知成绩列表 scores.
+
+任务:
+1. 用切片取出前三个成绩, 存入 first_three.
+2. 用切片取出最后两个成绩, 存入 last_two.
+3. 分别输出这两个新列表.
+4. 计算前三个成绩的平均分, 保留两位小数.
+
+提示:
+负数下标也能用于切片.
+"""
+
+# scores = [72, 85, 59, 90, 66]  # scores: 成绩列表
+# first_three = 0
+# last_two = 0
+
+# # first_three: 前三个成绩
+# # last_two: 最后两个成绩
+# # 请在下面编写代码:
+
+# first_three = scores[:3]
+# last_two = scores [3:]
+# print(first_three,last_two)
+# total = sum(first_three)
+# a = total / len(first_three);
+# print(f"{a:.2f}")
+
+"""
+练习: 带步长的切片
+
+任务:
+1. 取出下标为 0, 2, 4, 6 的元素, 存入 selected.
+2. 将整个列表倒序取出, 存入 reversed_numbers.
+3. 分别输出两个结果.
+4. 输出原列表, 观察它是否发生变化.
+
+要求:
+使用切片, 不使用循环.
+"""
+
+numbers = [12, 25, 38, 41, 56, 63, 70]  # numbers: 数字列表
+
+# selected: 选出的元素
+# reversed_numbers: 倒序得到的列表
+# 请在下面编写代码:
+
