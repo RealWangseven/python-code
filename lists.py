@@ -232,9 +232,61 @@ len(scores) 可以获取列表的元素个数.
 使用切片, 不使用循环.
 """
 
-numbers = [12, 25, 38, 41, 56, 63, 70]  # numbers: 数字列表
+# numbers = [12, 25, 38, 41, 56, 63, 70]  # numbers: 数字列表
 
-# selected: 选出的元素
-# reversed_numbers: 倒序得到的列表
-# 请在下面编写代码:
+# # selected: 选出的元素
+# # reversed_numbers: 倒序得到的列表
+# # 请在下面编写代码:
 
+# selected = numbers[::2]
+# reversed_numbers = numbers[::-1]
+# print(selected,reversed_numbers)
+# print(numbers)
+
+"""
+练习: 最近五次成绩分析
+
+任务:
+1. 取出最后五次成绩, 保存到 recent.
+2. 用循环统计这五次成绩中:
+   - 及格次数.
+   - 总分.
+   - 最高分.
+3. 如果至少及格四次, 并且平均分不低于 75:
+   输出 "表现稳定".
+   否则输出 "继续努力".
+4. 输出及格次数、最高分和平均分.
+   平均分保留两位小数.
+
+要求:
+使用切片、循环和条件判断.
+不使用 sum()、max().
+不要直接写死统计结果.
+"""
+
+# scores = [55, 80, 62, 91, 48, 76, 85, 60]  # scores: 历次成绩
+# # recent: 最近五次成绩
+# # passed: 及格次数
+# # total: 总分
+# # highest: 最高分
+# # average: 平均分
+
+# # 请在下面编写代码:
+# resent = scores[3:]
+# passed = 0
+# total = 0
+# highest = 0
+# for i in resent:
+#     total += i
+#     if i >= 60:
+#         passed += 1
+#     if i > highest:
+#         highest = i
+# a =total / len(scores[3:])
+# if passed >= 4 and a >= 75:
+#     print("成绩稳定");
+# else:
+#     print("继续努力")
+# print(f"{passed},{highest},{a:.2f}")
+
+    
