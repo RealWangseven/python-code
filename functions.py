@@ -257,8 +257,8 @@
 函数内不写 print().
 """
 
-group_a = [80, 45, 72, 58, 90]  # group_a: A 组成绩
-group_b = [30, 42, 59]  # group_b: B 组成绩
+# group_a = [80, 45, 72, 58, 90]  # group_a: A 组成绩
+# group_b = [30, 42, 59]  # group_b: B 组成绩
 
 # passing_stats: 及格成绩统计函数
 # data: 本次传入的成绩列表
@@ -312,13 +312,146 @@ group_b = [30, 42, 59]  # group_b: B 组成绩
 函数内不写 print().
 """
 
-prices = [35, 120, 88, 200, 150]  # prices: 商品价格列表
 
-# sale_stats: 优惠统计函数
-# data: 本次传入的价格列表
-# threshold: 参与优惠的价格门槛, 默认 100
-# count: 符合条件的商品数量
-# total: 符合条件商品的原价总和
+
+# prices = [35, 120, 88, 200, 150]  # prices: 商品价格列表
+
+# # sale_stats: 优惠统计函数
+# # data: 本次传入的价格列表
+# # threshold: 参与优惠的价格门槛, 默认 100
+# # count: 符合条件的商品数量
+# # total: 符合条件商品的原价总和
+# # 请在下面编写代码:
+# def sale_stats(data, threshold=100):
+#     total = 0
+#     count = 0
+#     for price in data:
+#         if price >= threshold:
+#             count += 1
+#             total += price
+
+#     total *=0.8
+
+#     return count,total
+# a1,a2 = sale_stats(prices)
+# b1,b2 = sale_stats(prices,threshold=200)
+# print(f"{a1:.2f},{a2}")
+# print(f"{b1:.2f},{b2}")
+        
+    
+"""
+2026/10/24
+"""
+
+"""
+练习: 同时返回和与积
+
+1. 定义函数 calculate(a, b).
+2. 按顺序返回两个数的和、两个数的乘积.
+3. 调用函数, 传入 6 和 4.
+4. 用两个变量分别接收结果, 并输出.
+
+要求:
+函数内不写 print().
+"""
+
+# calculate: 计算
+# total: 两数之和
+# product: 两数之积
 # 请在下面编写代码:
 
-sale_stats(data, threshold=100)
+# def calculate(a,b):
+#     total = a + b
+#     product = a * b
+#     return total,product
+# i,j = calculate(6,4)
+# print(i,j)
+
+"""
+练习: 两组成绩比较
+
+编写两个函数:
+
+1. analyze(data)
+   接收非空成绩列表.
+   返回总分、平均分.
+
+2. compare(data_a, data_b)
+   在内部调用 analyze(), 分别获取两组的总分和平均分.
+   比较平均分, 返回以下三个结果:
+   - 较高平均分对应的组名: "A组"、"B组" 或 "相同".
+   - A组平均分.
+   - B组平均分.
+
+在函数外:
+调用 compare(), 用三个变量接收结果并输出.
+平均分保留两位小数.
+
+要求:
+compare() 内不能重复计算总分和平均分, 必须调用 analyze().
+两个函数内部都不写 print().
+"""
+
+
+
+# group_a = [80, 95, 65]  # group_a: A组成绩
+# group_b = [72, 88, 91, 85]  # group_b: B组成绩
+
+# # analyze: 分析
+# # compare: 比较
+# # data_a、data_b: 传入的两组成绩
+# # winner: 比较结果
+# # 请在下面编写代码:
+
+# def analyze(data):
+#     total = 0
+#     for grade in data:
+#         total += grade
+#     average = total / len(data)
+#     return total,average;
+
+# def compare(data_a,data_b):
+#     total_a,avg_a = analyze(data_a)
+#     total_b,avg_b = analyze(data_b)
+#     if avg_a > avg_b:
+#         return "A组",avg_a,avg_b
+#     if avg_a < avg_b:
+#         return "B组",avg_a,avg_b
+#     else:
+#         return "相同",avg_a,avg_b
+# winer,avg_a,avg_b = compare(group_a,group_b)
+# print(f"{winer},{avg_a:.2f},{avg_b:.2f}")
+
+"""
+练习: 筛选及格成绩
+
+定义函数 select_scores(data, threshold=60).
+
+任务:
+1. 在函数内创建空列表 result.
+2. 遍历 data, 将 >= threshold 的成绩添加到 result.
+3. 返回 result.
+
+在函数外:
+1. 使用默认门槛调用, 输出筛选结果.
+2. 指定门槛为 80 再调用, 输出筛选结果.
+3. 计算第二次筛选结果的平均分, 保留两位小数.
+   如果结果为空, 输出 "没有符合条件的成绩".
+
+要求:
+原列表保持不变.
+函数内不写 print().
+"""
+
+scores = [45, 80, 62, 91, 58, 76]  # scores: 原始成绩
+
+# select_scores: 筛选成绩函数
+# data: 传入的成绩列表
+# threshold: 筛选门槛
+# result: 筛选结果, 用 [] 创建空列表
+# append(): 向列表末尾添加元素
+# len(result) == 0: 判断列表是否为空
+# 请在下面编写代码:
+
+def select_scores(data, threshold=60):
+    
