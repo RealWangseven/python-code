@@ -256,15 +256,49 @@
 先不用定义函数.
 """
 
-products = {
-    "apple": {"price": 5, "stock": 10},
-    "milk": {"price": 8, "stock": 3},
-    "bread": {"price": 6, "stock": 5}
-}  # products: 商品资料字典
+# products = {
+#     "apple": {"price": 5, "stock": 10},
+#     "milk": {"price": 8, "stock": 3},
+#     "bread": {"price": 6, "stock": 5}
+# }  # products: 商品资料字典
 
-total = 0  # total: 全部库存总价值
-low_stock = []  # low_stock: 库存不足 5 件的商品名列表
+# total = 0  # total: 全部库存总价值
+# low_stock = []  # low_stock: 库存不足 5 件的商品名列表
 
-# value: 当前商品的库存价值
+# # value: 当前商品的库存价值
+# # 请在下面编写代码:
+
+# for name, info in products.items():
+#     value = info["price"] * info["stock"]
+#     print(f"{name}:{value:.2f}")
+#     total += value
+#     if info["stock"] < 5:
+#         low_stock.append(name)
+# print(f"{total:.2f}")
+# print(low_stock)
+
+"""
+练习: 对比赋值与复制
+
+任务:
+1. 让 shared = stock.
+2. 让 copied = stock.copy().
+3. 将 shared 中 apple 的库存改为 10.
+4. 将 copied 中 milk 的库存改为 0.
+5. 分别输出 stock、shared、copied.
+
+先预测结果, 再运行检查.
+本题只使用一层字典.
+"""
+
+stock = {"apple": 5, "milk": 3}  # stock: 原库存
+
+# shared: 与原库存共用一个字典
+# copied: 复制得到的字典
 # 请在下面编写代码:
 
+shared = stock
+copied = stock.copy()
+shared["apple"] = 10
+copied["milk"] = 0
+print(stock,shared,copied)
