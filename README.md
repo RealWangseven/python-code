@@ -6,9 +6,9 @@
 **从基础语法开始，把每一点进步留在代码里。**
 
 [![Python](https://img.shields.io/badge/Python-学习中-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Learning Log](https://img.shields.io/badge/学习记录-持续更新-22C55E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RealWangseven/python-code)
+[![Learning Log](https://img.shields.io/badge/学习日记-持续更新-22C55E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RealWangseven/python-code)
 
-<img src="https://skillicons.dev/icons?i=python,cpp,pytorch,git,github,vscode&theme=light" alt="学习路线与开发工具" />
+<img src="https://skillicons.dev/icons?i=python,git,github,vscode&theme=light" alt="学习路线与开发工具" />
 
 <br />
 <br />
