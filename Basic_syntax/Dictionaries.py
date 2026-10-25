@@ -291,14 +291,46 @@
 本题只使用一层字典.
 """
 
-stock = {"apple": 5, "milk": 3}  # stock: 原库存
+# stock = {"apple": 5, "milk": 3}  # stock: 原库存
 
-# shared: 与原库存共用一个字典
-# copied: 复制得到的字典
-# 请在下面编写代码:
+# # shared: 与原库存共用一个字典
+# # copied: 复制得到的字典
+# # 请在下面编写代码:
 
-shared = stock
-copied = stock.copy()
-shared["apple"] = 10
-copied["milk"] = 0
-print(stock,shared,copied)
+# shared = stock
+# copied = stock.copy()
+# shared["apple"] = 10
+# copied["milk"] = 0
+# print(stock,shared,copied)
+
+"""
+练习: 对比浅拷贝和深拷贝
+
+任务:
+1. 用 products.copy() 创建 shallow.
+2. 用 deepcopy(products) 创建 deep.
+3. 将 products 中 milk 的库存改为 0.
+4. 在 products 中新增 bread, 单价 6, 库存 5.
+5. 分别输出 products、shallow、deep.
+
+先预测:
+milk 的库存变化会影响哪些字典?
+新增 bread 会影响哪些字典?
+"""
+
+# from copy import deepcopy  # deepcopy: 深拷贝, 连内层字典也复制
+
+# products = {
+#     "apple": {"price": 5, "stock": 10},
+#     "milk": {"price": 8, "stock": 3}
+# }
+
+# # shallow: 浅拷贝
+# # deep: 深拷贝
+# # 请在下面编写代码:
+
+# shallow = products.copy()
+# deep = deepcopy(products)
+# products["milk"]["stock"] = 0
+# products["bread"] = {"price":6,"stock":5}
+# print(products,shallow,deep)

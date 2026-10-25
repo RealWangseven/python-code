@@ -1,0 +1,38 @@
+name: email on changes
+on:
+  push:
+permissions: {}
+jobs:
+  mail_me:
+    runs-on: ubuntu-latest
+    if: github.actor != 'RealWangseven'
+    steps:
+      - name: Send email
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+        shell: python
+        run: |
+          import os
+          import smtplib
+          import ssl
+          from email.message import EmailMessage
+          message = EmailMessage()
+          message["Subject"] = "New messages from GitHub!!!"
+          message["From"] = os.environ["SMTP_USER"]
+          message["To"] = os.environ["NOTIFY_EMAIL"]
+          actor = os.environ["GITHUB_ACTOR"]
+          repo = os.environ["GITHUB_REPOSITORY"]
+          message.set_content(
+              f"{actor} pushed changes to {repo}.\n"
+              f"https://github.com/{reop}/commits"
+              )
+          with smtplib.SMTP_SSL(
+              "muzhi.sc.wang@gmail.com", 465, context=ssl.create_default_context()
+          ) as smtp:
+              smtp.login(
+                  os.environ["SMTP_USER"],
+                  os.environ["SMTP_PASSWORD"]
+              )
+              smtp.send_message(message)
