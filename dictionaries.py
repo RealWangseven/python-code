@@ -132,3 +132,139 @@
 #     if count >= 2:
 #         print(name,count)
 
+"""
+练习: 按类别统计支出
+
+每条记录的格式为 "类别,金额".
+
+任务:
+1. 遍历 records, 用 split() 拆出类别和金额.
+2. 用 int() 将金额转换为整数.
+3. 用字典 totals 累加每种类别的支出.
+4. 输出完整的支出字典.
+5. 查询 travel 的总支出, 不存在时返回 0.
+6. 遍历统计结果, 输出总支出 >= 50 的类别和金额.
+
+要求:
+累计金额使用 get().
+不直接写死统计结果.
+不用定义函数.
+"""
+
+
+
+# records = ["food,25", "books,40", "food,35", "games,60", "books,20"]
+# # records: 支出记录列表
+# totals = {}  # totals: 各类别的累计支出
+
+# # record: 当前记录
+# # category: 支出类别
+# # amount: 本笔金额
+# # 请在下面编写代码:
+
+# for i in records:
+#     category,amount = i.split(",")
+#     amount = int(amount)
+#     totals[category] = totals.get(category,0) + amount
+# print(totals)
+# print(totals.get("travel",0))
+# for category,amount in totals.items():
+#     if amount >= 50:
+#         print(category,amount)
+
+"""
+练习: 删除下架商品
+
+任务:
+1. 从 stock 中删除 milk, 用 removed 接收它原来的库存.
+2. 尝试删除 coffee, 不存在时返回 0.
+3. 分别输出两次删除返回的值.
+4. 输出删除后的完整库存字典.
+5. 查询 milk 的库存, 不存在时返回 0.
+
+要求:
+使用 pop() 删除, 使用 get() 查询.
+"""
+
+# stock = {"apple": 5, "milk": 3, "bread": 8}  # stock: 商品库存
+
+# # removed: 删除时返回的原库存
+# # 请在下面编写代码:
+
+# a = stock.pop("milk",0)
+# b = stock.pop("coffee",0)
+# print(a,b)
+# print(stock)
+# print(stock.get("milk",0))
+
+"""
+练习: 购买商品并计算金额
+
+任务:
+1. 商品不存在时, 输出 "Product not found".
+2. 购买数量小于等于 0 时, 输出 "Invalid quantity".
+3. 库存不足时, 输出 "Insufficient stock".
+4. 否则:
+   计算总金额.
+   扣减该商品库存.
+   输出总金额和剩余库存.
+
+要求:
+使用嵌套字典.
+总金额保留两位小数.
+先不用定义函数.
+"""
+
+# products = {
+#     "apple": {"price": 5, "stock": 10},
+#     "milk": {"price": 8, "stock": 3},
+#     "bread": {"price": 6, "stock": 5}
+# }  # products: 商品资料字典
+
+# product = "milk"  # product: 要购买的商品名
+# quantity = 2  # quantity: 购买数量
+
+# # total: 总金额
+# # 请在下面编写代码:
+# if product not in products:
+#     print("Product not found")
+# elif quantity <= 0:
+#     print("Invalid quantity")
+# elif products[product]["stock"] < quantity:
+#     print("Insufficient stock")
+# else:
+#     total = products[product]["price"] * quantity
+#     products[product]["stock"] -= quantity
+
+#     print(f"Total: {total:.2f}")
+#     print("Stock:",products[product]["stock"])
+
+"""
+练习: 计算库存总价值
+
+任务:
+1. 遍历 products, 计算每种商品的库存价值:
+   单价 * 库存数量.
+2. 输出每种商品的名称和库存价值.
+3. 累加并输出全部商品的库存总价值.
+4. 将库存少于 5 件的商品名添加到 low_stock, 最后输出.
+
+要求:
+使用 items() 遍历.
+不修改原字典.
+金额保留两位小数.
+先不用定义函数.
+"""
+
+products = {
+    "apple": {"price": 5, "stock": 10},
+    "milk": {"price": 8, "stock": 3},
+    "bread": {"price": 6, "stock": 5}
+}  # products: 商品资料字典
+
+total = 0  # total: 全部库存总价值
+low_stock = []  # low_stock: 库存不足 5 件的商品名列表
+
+# value: 当前商品的库存价值
+# 请在下面编写代码:
+
