@@ -35,4 +35,8 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Check Python syntax
+<<<<<<< HEAD:.github/workflows/python_check.yml
       run: python -m compileall -q .
+=======
+      run: python -m compileall -q . 
+>>>>>>> 7eb1459b4920e02feeef7ca23fe4c9d560188a3d:.github/workflows/python-app.yml
