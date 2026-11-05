@@ -1,11 +1,11 @@
 name: email on changes
 on:
   push:
+  workflow_dispatch:
 permissions: {}
 jobs:
   mail_me:
     runs-on: ubuntu-latest
-    if: github.actor != 'RealWangseven'
     steps:
       - name: Send email
         env:
@@ -26,10 +26,10 @@ jobs:
           repo = os.environ["GITHUB_REPOSITORY"]
           message.set_content(
               f"{actor} pushed changes to {repo}.\n"
-              f"https://github.com/{reop}/commits"
+              f"https://github.com/{repo}/commits"
               )
           with smtplib.SMTP_SSL(
-              "muzhi.sc.wang@gmail.com", 465, context=ssl.create_default_context()
+              "smtp.gmail.com", 465, context=ssl.create_default_context()
           ) as smtp:
               smtp.login(
                   os.environ["SMTP_USER"],
